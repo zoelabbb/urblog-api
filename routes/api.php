@@ -2,8 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+// This is for import controller API
 use App\Http\Controllers\Api\PostController;
-use App\Http\Controllers\HeroController;
+use App\Http\Controllers\Api\HeroController;
 
 Route::get('/hero', [HeroController::class, 'getHeroData']);
 Route::put('/hero/{id}', [HeroController::class, 'update']);
