@@ -11,7 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Call HeroSeeder
-        $this->call(HeroSeeder::class);
+        $this->call(
+            [
+                HeroSeeder::class,
+                HeroSectionAltSeeder::class,
+                FeaturesSeeder::class,
+            ]
+        );
     }
 }

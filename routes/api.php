@@ -6,9 +6,15 @@ use Illuminate\Support\Facades\Route;
 // This is for import controller API
 use App\Http\Controllers\Api\PostController;
 use App\Http\Controllers\Api\HeroController;
+use App\Http\Controllers\Api\FeatureController;
+use App\Http\Controllers\Api\HeroSectionAltController;
+
+Route::get('hero-section-alt', [HeroSectionAltController::class, 'index']);  // Untuk mendapatkan data hero section alternatif
+
+Route::get('features', [FeatureController::class, 'index']);  // Untuk mendapatkan semua fitur
+Route::get('features/{id}', [FeatureController::class, 'show']);  // Untuk mendapatkan fitur berdasarkan ID
 
 Route::get('/hero', [HeroController::class, 'getHeroData']);
-Route::put('/hero/{id}', [HeroController::class, 'update']);
 
 Route::get('posts', [PostController::class, 'index']);
 Route::get('posts/{id}', [PostController::class, 'show']);
