@@ -2,6 +2,21 @@
 
 Urblog API is the backend API for the **Urblog** blogging application. Built with **Laravel 11**, it provides features for managing users, articles, and comments, secured with CORS, and supports **AWS S3** storage with CDN for fast content delivery.
 
+## Link Website
+
+-   Beta test link: https://urblog-git-beta-ryudev.vercel.app/
+-   Production link: https://www.news.urproject.my.id/
+-   API link: https://ryudev.urproject.my.id/api/...
+
+## API Endpoints
+
+Here are some of the available API endpoints:
+
+-   `/features`: Retrieve a list of features.
+-   `/features/{id}`: Retrieve a specific feature by its ID.
+-   `/hero`: Access the hero section data.
+-   `/hero-section-alt`: Access the alternative hero section data.
+
 ## Features
 
 -   **User Management**: Registration, login, and profile management.
