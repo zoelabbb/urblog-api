@@ -32,7 +32,7 @@ Here are some of the available API endpoints:
 
 -   **Framework**: Laravel 11
 -   **Authentication**: Laravel Sanctum
--   **Database**: MySQL/PostgreSQL
+-   **Database**: MySQL/PostgreSQL Cloud
 -   **Storage**: AWS S3
 -   **API Architecture**: RESTful
 -   **Random Photo Profile**: https://avatar-placeholder.iran.liara.run/
