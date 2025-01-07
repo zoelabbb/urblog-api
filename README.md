@@ -16,6 +16,8 @@ Here are some of the available API endpoints:
 -   `/features/{id}`: Retrieve a specific feature by its ID.
 -   `/hero`: Access the hero section data.
 -   `/hero-section-alt`: Access the alternative hero section data.
+-   `/partners`: Retrieve a list of partners.
+-   `/partners/{id}`: Retrieve a specific partners by ID.
 
 ## Features
 
@@ -33,6 +35,7 @@ Here are some of the available API endpoints:
 -   **Database**: MySQL/PostgreSQL
 -   **Storage**: AWS S3
 -   **API Architecture**: RESTful
+-   **Random Photo Profile**: https://avatar-placeholder.iran.liara.run/
 
 ## Installation
 
