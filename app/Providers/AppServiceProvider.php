@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //Rate limiting for API
         RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(10); // 60 requests per minute
+            Log::info('Request made from: ', ['ip' => $request->ip()]);
+            return Limit::perMinute(60); // 60 requests per minute
         });
     }
 }
