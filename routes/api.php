@@ -11,22 +11,22 @@ use App\Http\Controllers\Api\HeroSectionAltController;
 use App\Http\Controllers\Api\PartnerController;
 
 // Get list of partners
-Route::get('/partners', [PartnerController::class, 'index']);
-Route::get('/partners/{id}', [PartnerController::class, 'show']);
+Route::get('/partners', [PartnerController::class, 'index'])->middleware('throttle:api');  // Untuk mendapatkan semua partner
+Route::get('/partners/{id}', [PartnerController::class, 'show'])->middleware('throttle:api');  // Untuk mendapatkan partner berdasarkan ID
 
 // Get detail hero section alternatif
 Route::get('hero-section-alt', [HeroSectionAltController::class, 'index']);  // Untuk mendapatkan data hero section alternatif
 
 // Get list of features
-Route::get('features', [FeatureController::class, 'index']);  // Untuk mendapatkan semua fitur
-Route::get('features/{id}', [FeatureController::class, 'show']);  // Untuk mendapatkan fitur berdasarkan ID
+Route::get('features', [FeatureController::class, 'index'])->middleware('throttle:api');  // Untuk mendapatkan semua fitur
+Route::get('features/{id}', [FeatureController::class, 'show'])->middleware('throttle:api');  // Untuk mendapatkan fitur berdasarkan ID
 
 // Get list of hero
-Route::get('/hero', [HeroController::class, 'getHeroData']);
+Route::get('/hero', [HeroController::class, 'getHeroData'])->middleware('throttle:api');
 
 // Get list of posts
-Route::get('posts', [PostController::class, 'index']);
-Route::get('posts/{id}', [PostController::class, 'show']);
+Route::get('posts', [PostController::class, 'index'])->middleware('throttle:api');
+Route::get('posts/{id}', [PostController::class, 'show'])->middleware('throttle:api');
 
 Route::get('/user', function (Request $request) {
     return $request->user();
