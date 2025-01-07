@@ -20,7 +20,7 @@ return [
     'allowed_methods' => ['*'],
 
     'allowed_origins' => [
-        'https://www.news.urproject.my.id/',
+        'https://www.news.urproject.my.id',
     ],
 
     'allowed_origins_patterns' => [],
