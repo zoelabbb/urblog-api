@@ -17,10 +17,11 @@ return [
 
     'paths' => ['api/*', 'sanctum/csrf-cookie'],
 
-    'allowed_methods' => ['*'],
+    'allowed_methods' => ['GET'],
 
     'allowed_origins' => [
         'https://www.news.urproject.my.id',
+        'http://localhost:4321',
     ],
 
     'allowed_origins_patterns' => [],
