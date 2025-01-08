@@ -26,7 +26,7 @@ Route::get('/hero', [HeroController::class, 'getHeroData'])->middleware('throttl
 
 // Get list of posts
 Route::get('posts', [PostController::class, 'index'])->middleware('throttle:api');
-Route::get('posts/{id}', [PostController::class, 'show'])->middleware('throttle:api');
+Route::get('/posts/{slug}', [PostController::class, 'show'])->middleware('throttle:api');  // Untuk mengambil post berdasarkan slug
 
 Route::get('/user', function (Request $request) {
     return $request->user();

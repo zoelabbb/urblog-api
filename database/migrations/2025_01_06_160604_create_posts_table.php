@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->string('category');
+            $table->string('slug')->unique();
             $table->string('banner');
             $table->string('banner2')->nullable();
             $table->json('tags');

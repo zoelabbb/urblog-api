@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
                 HeroSectionAltSeeder::class,
                 FeaturesSeeder::class,
                 PartnersTableSeeder::class,
+                PostSeeder::class,
             ]
         );
     }
