@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //Rate limiting for API
         RateLimiter::for('api', function (Request $request) {
-            Log::info('Request made from: ', ['ip' => $request->ip()]);
+            // Log::info('Request made from: ', ['ip' => $request->ip()]);
             return Limit::perMinute(25); // 25 requests per minute
         });
     }
